@@ -32,6 +32,7 @@ def training(data, l_rate, n):
             for i in range(len(row) - 1):
                 # update weights
                 # a = a + eta(y-yhat)*x
+                    # https://en.wikipedia.org/wiki/Perceptron
                 weights[i + 1] = weights[i + 1] + l_rate * error * row[i]
         print('>t=%d' % (t))
     return weights
